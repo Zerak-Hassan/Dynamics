@@ -3,7 +3,7 @@ pygame.init()
 
 SCREEN_WIDTH = 1920
 SCREEN_HEIGHT = 1080
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))#get the screen resolution somehow
 mass=pygame.Rect((SCREEN_WIDTH/2)-50, (SCREEN_HEIGHT/2)-50, 50, 50)
 
 run = True
@@ -18,4 +18,4 @@ while run:
 
     pygame.display.update()
 
-pygame.quit()
+pygame.quit()#have a way to quit from in game?
