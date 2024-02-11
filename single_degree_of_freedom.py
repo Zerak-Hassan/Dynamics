@@ -1,8 +1,8 @@
 import pygame
 pygame.init()
 
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 1920
+SCREEN_HEIGHT = 1080
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 mass=pygame.Rect((SCREEN_WIDTH/2)-50, (SCREEN_HEIGHT/2)-50, 50, 50)
 
