@@ -1,6 +1,8 @@
 import pygame
 pygame.init()
 
+clock=pygame.time.Clock()
+
 screen = pygame.display.set_mode()
 #initial displacements
 x0=0
@@ -20,6 +22,8 @@ pygame.display.update()
 
 run = True
 while run:
+
+    clock.tick(1)
 
     mass.x += xdot0
     mass.y -= ydot0
