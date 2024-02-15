@@ -1,3 +1,5 @@
 This is a list of tasks to do:
 Add a springs
 impart forces
+Add something that shows the inital position of the system
+Add graphs to show the change in the different varibles in the system
