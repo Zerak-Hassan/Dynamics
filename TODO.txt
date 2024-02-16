@@ -4,3 +4,5 @@ impart forces
 Add something that shows the inital position of the system
 Add graphs to show the change in the different varibles in the system
 Replace equilibrium position with initial displacements 
+Add a time step and display the current time
+Get the system to start on a button press
