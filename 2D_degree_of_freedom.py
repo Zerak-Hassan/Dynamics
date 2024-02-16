@@ -2,11 +2,12 @@ import pygame
 pygame.init()
 
 clock=pygame.time.Clock()
+time=0
 
 text_font=pygame.font.SysFont(None,30)
 def draw_text(text, font, text_colour, x, y):
     img=font.render(text, True, text_colour)
-    screen.blit(img,x,y)
+    screen.blit(img,(x,y))
 
 screen = pygame.display.set_mode()
 #initial position
@@ -30,20 +31,24 @@ mass=pygame.Rect(initial_position_x, initial_position_y, size, size)
 #inital position
 screen.fill((0,0,0))
 pygame.draw.rect(screen, (255, 0, 0), mass)
+draw_text(str(time),text_font,(255,255,255),0,0)
 pygame.display.update()
 #t=1 position
+time+=1
 xdot=xdot0-(mass.x-x_equilibrium)*x_spring
 ydot=ydot0-y_spring*(mass.y-y_equilibrium)
 mass.x += xdot
 mass.y -= ydot
 screen.fill((0,0,0))
 pygame.draw.rect(screen, (255, 0, 0), mass)
+draw_text(str(time),text_font,(255,255,255),0,0)
 pygame.display.update()
 
 run = True  
 while run:
 
     clock.tick(1)
+    time += 1
 
     xdot -= x_spring*(mass.x-x_equilibrium)
     ydot += y_spring*(mass.y-y_equilibrium)
@@ -56,7 +61,7 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run=False
-
+    draw_text(str(time),text_font,(255,255,255),0,0)
     pygame.display.update()
 
 pygame.quit()#have a way to quit from in game?
